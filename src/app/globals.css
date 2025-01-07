@@ -27,10 +27,27 @@ body {
   font-family: Avant Garde Book BT, Helvetica, sans-serif;
 }
 
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
 .mask {
   mask-image: url("../../public/mask.svg");
   background: #ec4e39;
   mask-repeat: no-repeat;
   mask-size: 40px;
   color: black;
+}
+
+#stickyMask {
+  mask-image: url("../../public/medias/raven.svg");
+  mask-position: 52.35% center;
+  mask-repeat: no-repeat;
+  mask-size: 80%;
 }
